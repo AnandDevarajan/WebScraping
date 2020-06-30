@@ -17,4 +17,24 @@ const phone =
     },
     gzip: true,
   });
+  let $ = cherio.load(response);
+  const title = $(
+    'div[class="a-section a-spacing-none"]>h1>span'
+  ).textContent.trim();
+  const rating = $('div[class="a-row"]>span').textContent;
+  const review = $(
+    'div[class="a-expander-content reviewText review-text-content a-expander-partial-collapse-content"]>span'
+  ).textContent;
+  const size = $('div[class="a-row a-spacing-micro singleton"]>span')
+    .textContent;
+  const price = $(
+    'div[class="a-section a-spacing-small"]>table[class="a-lineitem"]>tbody>tr>td[class="a-span12"]>span'
+  ).textContent;
+  phoneData.push({
+    title,
+    rating,
+    review,
+    size,
+    price,
+  });
 })();
