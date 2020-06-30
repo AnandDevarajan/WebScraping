@@ -1,0 +1,4 @@
+title=$('div[class="a-section a-spacing-none"]>h1>span').textContent.trim()
+rating=$('div[class="a-row"]>span').textContent
+revieww=$('div[class="a-expander-content reviewText review-text-content a-expander-partial-collapse-content"]>span').textContent
+size=$('div[class="a-row a-spacing-micro singleton"]>span').textContent
